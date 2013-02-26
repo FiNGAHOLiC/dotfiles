@@ -1,4 +1,6 @@
-# My config files.
+# dotfiles
+
+My config files.
 
 ## Usage
 
@@ -9,6 +11,6 @@ $ ln -s dotfiles/.gvimrc .gvimrc
 $ ln -s dotfiles/.vim .vim
 ```
 
-Launch `vim`, run `:NeoBundleInstall`.
+Then, launch `vim` and run `:NeoBundleInstall`.
 
 
