@@ -17,4 +17,6 @@ $ git submodule update
 
 Then, launch `vim` and run `:NeoBundleInstall`.
 
+And if you haven't installed jshint yet, run `npm install -g jshint`.
+
 
