@@ -22,7 +22,7 @@ let g:syntastic_javascript_checker='jshint'
 let g:syntastic_mode_map={
       \ 'mode': 'active',
       \ 'active_filetypes': ['javascript'],
-      \ 'passive_filetypes': []
+      \ 'passive_filetypes': ['html']
       \ }
 
 if has('vim_starting')
