@@ -38,6 +38,7 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'Shougo/neocomplcache'
 
 filetype plugin on
 filetype indent on
