@@ -14,6 +14,10 @@ autocmd vimenter * NERDTree
 set nocompatible
 filetype off
 
+let g:neocomplcache_enable_at_startup = 1
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><CR>  pumvisible() ? neocomplcache#smart_close_popup() : "\<CR>"
+
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_save=1
 let g:syntastic_auto_loc_list=1
