@@ -1,23 +1,38 @@
-set number
-
-set list
-set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<,eol:<
-
-set nobackup
-
-set noswapfile
-
-let g:netrw_liststyle=3
-
-autocmd vimenter * NERDTree
-
+" vi互換をOFF
 set nocompatible
+
+" filetypeをオフ
 filetype off
 
+" 行番号を表示
+set number
+
+" タブ、空白、改行を可視化する
+set list
+
+" タブ、空白、改行等の表示文字を設定
+set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<,eol:<
+
+" バックアップファイルを作成しない
+set nobackup
+
+" スワップファイルを作成しない
+set noswapfile
+
+" 起動時にNERDTreeを起動
+autocmd vimenter * NERDTree
+"
+" netrmは常にtree view
+let g:netrw_liststyle=3
+
+" neocomplcacheを起動時に有効化
 let g:neocomplcache_enable_at_startup = 1
+
+" neocomplcacheのキーマッピングを設定
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><CR>  pumvisible() ? neocomplcache#smart_close_popup() : "\<CR>"
 
+" syntasticの設定
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_save=1
 let g:syntastic_auto_loc_list=1
@@ -29,11 +44,13 @@ let g:syntastic_mode_map={
       \ 'passive_filetypes': ['html']
       \ }
 
+" neobundleの格納パスを指定して実行
 if has('vim_starting')
 	set runtimepath+=~/.vim/neobundle/neobundle.vim
 	call neobundle#rc(expand('~/.vim/neobundle'))
 endif
 
+" neobundleで管理するプラグイン
 NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tomasr/molokai'
@@ -44,11 +61,11 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'Shougo/neocomplcache'
 
-filetype plugin on
-filetype indent on
-
+" 起動時はフルスクリーンで起動
 if has("gui_running")
 	set fuoptions=maxvert,maxhorz
 	au GUIEnter * set fullscreen
 endif
 
+" filetypeをオン
+filetype plugin indent on
