@@ -19,11 +19,28 @@ set nobackup
 " スワップファイルを作成しない
 set noswapfile
 
+" 矢印キーを使用しない
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Right> <Nop>
+
+" 検索結果移動時に画面を中央にしながら移動
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
+nnoremap g* g*zz
+nnoremap g# g#zz
+
 " 起動時にNERDTreeを起動
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 "
 " netrmは常にtree view
-let g:netrw_liststyle=3
+"let g:netrw_liststyle=3
 
 " neocomplcacheを起動時に有効化
 let g:neocomplcache_enable_at_startup = 1
