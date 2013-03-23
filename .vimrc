@@ -7,6 +7,9 @@ filetype off
 " 行番号を表示
 set number
 
+" 相対行番号を表示
+"set relativenumber
+
 " タブ、空白、改行を可視化する
 set list
 
@@ -18,6 +21,9 @@ set nobackup
 
 " スワップファイルを作成しない
 set noswapfile
+
+" vim-easymotionの起動割り当てを変更
+let g:EasyMotion_leader_key = '<Space><Space>'
 
 " 矢印キーを使用しない
 noremap <Up> <Nop>
@@ -71,7 +77,7 @@ endif
 NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tomasr/molokai'
-NeoBundle 'scrooloose/nerdtree'
+"NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'scrooloose/syntastic'
