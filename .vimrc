@@ -22,6 +22,9 @@ set nobackup
 " スワップファイルを作成しない
 set noswapfile
 
+" viminfoファイルを作成しない
+set viminfo=
+
 " vim-easymotionの起動割り当てを変更
 let g:EasyMotion_leader_key = '<Space><Space>'
 
