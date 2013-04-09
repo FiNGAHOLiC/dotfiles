@@ -59,14 +59,15 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><CR>  pumvisible() ? neocomplcache#smart_close_popup() : "\<CR>"
 
 " syntasticの設定
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_save=1
-let g:syntastic_auto_loc_list=1
+" なぜかウインドウを閉じれないケースがあるので無効にしとく
+" let g:syntastic_check_on_open=1
+" let g:syntastic_check_on_save=1
+" let g:syntastic_auto_loc_list=1
 let g:syntastic_loc_list_height=10
 let g:syntastic_javascript_checker='jshint'
 let g:syntastic_mode_map={
       \ 'mode': 'active',
-      \ 'active_filetypes': ['javascript'],
+      \ 'active_filetypes': [],
       \ 'passive_filetypes': ['html']
       \ }
 
