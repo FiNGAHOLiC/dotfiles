@@ -28,6 +28,9 @@ set viminfo=
 " vim-easymotionの起動割り当てを変更
 let g:EasyMotion_leader_key = '<Space><Space>'
 
+" インサートモードを抜けたら日本語入力を自動的にオフにする
+inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
+
 " 矢印キーを使用しない
 noremap <Up> <Nop>
 noremap <Down> <Nop>
