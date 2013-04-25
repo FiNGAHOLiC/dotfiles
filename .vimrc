@@ -98,12 +98,18 @@ if has("gui_running")
 	set fuoptions=maxvert,maxhorz
 	au GUIEnter * set fullscreen
 endif
+
 " indent_guides用にカラースキームを指定
 colorscheme molokai
+" set expandtab
+set tabstop=4
+set shiftwidth=4
 
 " indent_guidesの設定
 " https://github.com/nathanaelkane/vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
 
 " filetypeをオン
 filetype plugin indent on
