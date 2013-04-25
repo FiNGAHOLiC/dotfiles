@@ -11,10 +11,10 @@ set number
 "set relativenumber
 
 " タブ、空白、改行を可視化する
-set list
+" set list
 
 " タブ、空白、改行等の表示文字を設定
-set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<,eol:<
+" set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<,eol:<
 
 " バックアップファイルを作成しない
 set nobackup
@@ -91,12 +91,19 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 
 " 起動時はフルスクリーンで起動
 if has("gui_running")
 	set fuoptions=maxvert,maxhorz
 	au GUIEnter * set fullscreen
 endif
+" indent_guides用にカラースキームを指定
+colorscheme molokai
+
+" indent_guidesの設定
+" https://github.com/nathanaelkane/vim-indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
 
 " filetypeをオン
 filetype plugin indent on
