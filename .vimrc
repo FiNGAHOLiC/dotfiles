@@ -4,6 +4,28 @@ set nocompatible
 " filetypeをオフ
 filetype off
 
+" neobundleの格納パスを指定して実行
+if has('vim_starting')
+	set runtimepath+=~/.vim/neobundle/neobundle.vim
+	call neobundle#rc(expand('~/.vim/neobundle'))
+endif
+
+" neobundleで管理するプラグイン
+NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tomasr/molokai'
+"NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+
+" filetypeをオン
+filetype plugin indent on
+
 " 行番号を表示
 set number
 
@@ -74,25 +96,6 @@ let g:syntastic_mode_map={
       \ 'passive_filetypes': ['html']
       \ }
 
-" neobundleの格納パスを指定して実行
-if has('vim_starting')
-	set runtimepath+=~/.vim/neobundle/neobundle.vim
-	call neobundle#rc(expand('~/.vim/neobundle'))
-endif
-
-" neobundleで管理するプラグイン
-NeoBundle 'mattn/zencoding-vim'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tomasr/molokai'
-"NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-
 " 起動時はフルスクリーンで起動
 if has("gui_running")
 	set fuoptions=maxvert,maxhorz
@@ -110,6 +113,3 @@ set shiftwidth=4
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
-
-" filetypeをオン
-filetype plugin indent on
