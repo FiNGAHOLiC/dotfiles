@@ -20,6 +20,7 @@ NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 
@@ -79,9 +80,26 @@ nnoremap g# g#zz
 " neocomplcacheを起動時に有効化
 let g:neocomplcache_enable_at_startup = 1
 
-" neocomplcacheのキーマッピングを設定
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" ユーザー定義スニペット保存ディレクトリ
+let g:neocomplcache_snippets_dir = $HOME.'/.vim/snippets'
+
+" http://kazuph.hateblo.jp/entry/2013/01/19/193745
+" <TAB>: completion.                                         
+" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"   
+inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>" 
 inoremap <expr><CR>  pumvisible() ? neocomplcache#smart_close_popup() : "\<CR>"
+
+" Plugin key-mappings.
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal') set conceallevel=2 concealcursor=i
+endif
 
 " syntasticの設定
 " なぜかウインドウを閉じれないケースがあるので無効にしとく
