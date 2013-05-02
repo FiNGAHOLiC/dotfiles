@@ -22,7 +22,8 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'nathanaelkane/vim-indent-guides'
+" NeoBundle 'nathanaelkane/vim-indent-guides'
+" NeoBundle 'Townk/vim-autoclose'
 
 " filetypeをオン
 filetype plugin indent on
@@ -34,10 +35,10 @@ set number
 "set relativenumber
 
 " タブ、空白、改行を可視化する
-" set list
+set list
 
 " タブ、空白、改行等の表示文字を設定
-" set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<,eol:<
+set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<,eol:<
 
 " バックアップファイルを作成しない
 set nobackup
@@ -71,9 +72,16 @@ nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
 
+" 括弧やクォートを自動補完
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+
 " 起動時にNERDTreeを起動
 "autocmd vimenter * NERDTree
-"
+
 " netrmは常にtree view
 "let g:netrw_liststyle=3
 
@@ -98,8 +106,9 @@ imap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : 
 smap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " For snippet_complete marker.
-if has('conceal') set conceallevel=2 concealcursor=i
-endif
+" if has('conceal')
+" 	set conceallevel=2 concealcursor=i
+" endif
 
 " syntasticの設定
 " なぜかウインドウを閉じれないケースがあるので無効にしとく
@@ -121,13 +130,13 @@ if has("gui_running")
 endif
 
 " indent_guides用にカラースキームを指定
-colorscheme molokai
+" colorscheme molokai
 " set expandtab
-set tabstop=4
-set shiftwidth=4
+" set tabstop=4
+" set shiftwidth=4
 
 " indent_guidesの設定
 " https://github.com/nathanaelkane/vim-indent-guides
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
+" let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_start_level = 2
+" let g:indent_guides_guide_size = 1
