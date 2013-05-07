@@ -14,7 +14,8 @@ endif
 NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tomasr/molokai'
-"NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'scrooloose/syntastic'
@@ -80,10 +81,23 @@ inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 
 " 起動時にNERDTreeを起動
-"autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
+
+" 不可視ファイルを表示する
+let g:NERDTreeShowHidden = 1
+
+" NERDTreeを起動時に表示
+let g:nerdtree_tabs_open_on_gui_startup=1
+let g:nerdtree_tabs_open_on_console_startup=1
+
+" 起動時にディレクトリならNERDTree、ファイルならファイルにフォーカスをあてる
+let g:nerdtree_tabs_smart_startup_focus=1
+
+" 新規タブを開いた時にもNERDTreeを表示する
+let g:nerdtree_tabs_open_on_new_tab=1
 
 " netrmは常にtree view
-"let g:netrw_liststyle=3
+let g:netrw_liststyle=3
 
 " neocomplcacheを起動時に有効化
 let g:neocomplcache_enable_at_startup = 1
