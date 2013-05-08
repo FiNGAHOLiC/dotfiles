@@ -24,7 +24,8 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'vim-scripts/AutoClose'
+" NeoBundle 'Townk/vim-autoclose'
 " NeoBundle 'nathanaelkane/vim-indent-guides'
 
 " filetypeをオン
