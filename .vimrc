@@ -24,8 +24,8 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'Townk/vim-autoclose'
 " NeoBundle 'nathanaelkane/vim-indent-guides'
-" NeoBundle 'Townk/vim-autoclose'
 
 " filetypeをオン
 filetype plugin indent on
@@ -75,11 +75,11 @@ nnoremap g* g*zz
 nnoremap g# g#zz
 
 " 括弧やクォートを自動補完
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
+" inoremap { {}<LEFT>
+" inoremap [ []<LEFT>
+" inoremap ( ()<LEFT>
+" inoremap " ""<LEFT>
+" inoremap ' ''<LEFT>
 
 " 起動時にNERDTreeを起動
 " autocmd vimenter * NERDTree
