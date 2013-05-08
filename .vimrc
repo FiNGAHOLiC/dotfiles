@@ -23,6 +23,7 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'kien/ctrlp.vim'
 " NeoBundle 'nathanaelkane/vim-indent-guides'
 " NeoBundle 'Townk/vim-autoclose'
 
