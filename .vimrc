@@ -105,7 +105,8 @@ let g:netrw_liststyle=3
 let g:neocomplcache_enable_at_startup = 1
 
 " ユーザー定義スニペット保存ディレクトリ
-let g:neocomplcache_snippets_dir = $HOME.'/.vim/snippets'
+" let g:neocomplcache_snippets_dir = $HOME.'/.vim/snippets'
+let g:neosnippet#snippets_directory = '~/.vim/snippets'
 
 " http://kazuph.hateblo.jp/entry/2013/01/19/193745
 " <TAB>: completion.                                         
