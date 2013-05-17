@@ -75,6 +75,13 @@ nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
 
+" タブ移動
+noremap gh gT
+noremap gl gt
+
+" ESCをjjに
+inoremap jj <Esc>
+
 " 括弧やクォートを自動補完
 " inoremap { {}<LEFT>
 " inoremap [ []<LEFT>
