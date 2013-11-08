@@ -12,6 +12,7 @@ endif
 
 " neobundleで管理するプラグイン
 NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'mattn/emmet-vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'scrooloose/nerdtree'
