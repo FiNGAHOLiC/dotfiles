@@ -11,8 +11,8 @@ if has('vim_starting')
 endif
 
 " neobundleで管理するプラグイン
-NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'majutsushi/tagbar'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'scrooloose/nerdtree'
@@ -89,6 +89,16 @@ inoremap jj <Esc>
 " inoremap ( ()<LEFT>
 " inoremap " ""<LEFT>
 " inoremap ' ''<LEFT>
+
+" ctags用の設定
+" F3キーで検索結果をQuickFixに表示する
+nnoremap <F3> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
+
+" tagbarをF8キーで起動する
+nmap <F8> :TagbarToggle<CR>
+
+" 起動時にtagbarを起動する
+" autocmd VimEnter * nested :TagbarOpen
 
 " 起動時にNERDTreeを起動
 " autocmd vimenter * NERDTree
