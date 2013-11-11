@@ -12,7 +12,6 @@ endif
 
 " neobundleで管理するプラグイン
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'majutsushi/tagbar'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'scrooloose/nerdtree'
@@ -25,6 +24,12 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'vim-scripts/tagbar-phpctags', {
+     \ 'build' : {
+     \ 'others' : 'chmod +x bin/phpctags',
+     \ },
+     \ }
 " NeoBundle 'vim-scripts/AutoClose'
 " NeoBundle 'Townk/vim-autoclose'
 " NeoBundle 'nathanaelkane/vim-indent-guides'
@@ -96,6 +101,16 @@ nnoremap <F3> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
 
 " tagbarをF8キーで起動する
 nmap <F8> :TagbarToggle<CR>
+
+" tagbarでCSSもサポートする
+let g:tagbar_type_css = {
+     \ 'ctagstype' : 'Css',
+     \ 'kinds' : [
+     \ 'c:classes',
+     \ 's:selectors',
+     \ 'i:identities'
+     \ ]
+     \ }
 
 " 起動時にtagbarを起動する
 " autocmd VimEnter * nested :TagbarOpen
