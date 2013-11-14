@@ -1,3 +1,4 @@
+set gfn=Monaco:h14
 set t_Co=256
 set transparency=10
 colorscheme molokai

@@ -121,6 +121,9 @@ let g:tagbar_type_css = {
 " 不可視ファイルを表示する
 let g:NERDTreeShowHidden = 1
 
+" 起動時にブックマークを表示
+let NERDTreeShowBookmarks=1
+
 " NERDTreeを起動時に表示
 let g:nerdtree_tabs_open_on_gui_startup=1
 let g:nerdtree_tabs_open_on_console_startup=1
