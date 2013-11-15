@@ -58,6 +58,10 @@ set noswapfile
 " viminfoファイルを作成しない
 set viminfo=
 
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 " vim-easymotionの起動割り当てを変更
 let g:EasyMotion_leader_key = '<Space><Space>'
 
