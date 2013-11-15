@@ -85,6 +85,12 @@ nnoremap g# g#zz
 noremap gh gT
 noremap gl gt
 
+" 行単位でなく表示行単位で移動
+noremap j gj
+noremap k gk
+noremap gj j
+noremap gk k
+
 " ESCをjjに
 inoremap jj <Esc>
 
@@ -144,8 +150,9 @@ let g:neocomplcache_enable_at_startup = 1
 " let g:neocomplcache_snippets_dir = $HOME.'/.vim/snippets'
 let g:neosnippet#snippets_directory = '~/.vim/snippets'
 
+" 補完をタブで移動できるよう
 " http://kazuph.hateblo.jp/entry/2013/01/19/193745
-" <TAB>: completion.                                         
+" <TAB>: completion.
 " inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"   
 inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>" 
 inoremap <expr><CR>  pumvisible() ? neocomplcache#smart_close_popup() : "\<CR>"
