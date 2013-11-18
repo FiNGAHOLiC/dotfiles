@@ -11,6 +11,7 @@ if has('vim_starting')
 endif
 
 " neobundleで管理するプラグイン
+NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tomasr/molokai'
@@ -58,6 +59,7 @@ set noswapfile
 " viminfoファイルを作成しない
 set viminfo=
 
+" タブを4スペースに
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -126,13 +128,13 @@ let g:tagbar_type_css = {
 " autocmd VimEnter * nested :TagbarOpen
 
 " 起動時にNERDTreeを起動
-" autocmd vimenter * NERDTree
+" autocmd VimEnter * NERDTree
 
 " 不可視ファイルを表示する
 let g:NERDTreeShowHidden = 1
 
 " 起動時にブックマークを表示
-let NERDTreeShowBookmarks=1
+let g:NERDTreeShowBookmarks=1
 
 " NERDTreeを起動時に表示
 let g:nerdtree_tabs_open_on_gui_startup=1
