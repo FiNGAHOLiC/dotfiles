@@ -11,6 +11,7 @@ if has('vim_starting')
 endif
 
 " neobundleで管理するプラグイン
+NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'tpope/vim-surround'
@@ -63,6 +64,18 @@ set viminfo=
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set noautoindent
+
+" 無限Undo
+" http://blog.papix.net/entry/2012/12/14/042937
+if has('persistent_undo')
+     set undodir=~/.vim/undo
+     set undofile
+     endif
+
+" 前回の編集位置からスタート
+" http://blog.papix.net/entry/2012/12/14/042937
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\""
 
 " vim-easymotionの起動割り当てを変更
 let g:EasyMotion_leader_key = '<Space><Space>'
@@ -106,6 +119,17 @@ inoremap jj <Esc>
 " inoremap ( ()<LEFT>
 " inoremap " ""<LEFT>
 " inoremap ' ''<LEFT>
+
+" カーソルを自動的に()の中へ
+" http://blog.papix.net/entry/2012/12/14/042937
+imap {} {}<Left>
+imap [] []<Left>
+imap () ()<Left>
+imap "" ""<Left>
+imap '' ''<Left>
+imap <> <><Left>
+imap // //<left>
+imap /// ///<left>
 
 " ctags用の設定
 " F3キーで検索結果をQuickFixに表示する
